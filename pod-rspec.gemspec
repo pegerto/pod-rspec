@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pod/rspec/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pod-srpec"
+  spec.name          = "pod-rspec"
   spec.version       = Pod::RSpec::VERSION
   spec.authors       = ["Pegerto Fernandez"]
   spec.email         = ["pegerto@gmail.com"]
