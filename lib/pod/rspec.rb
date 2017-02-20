@@ -1,7 +1,7 @@
-require "pod/spec/version"
+require "pod/rspec/version"
 
 module Pod
-  module Spec
+  module RSpec
     # Your code goes here...
   end
 end

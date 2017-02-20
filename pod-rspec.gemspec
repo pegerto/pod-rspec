@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pod/spec/version'
+require 'pod/rspec/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pod-spec"
-  spec.version       = Pod::Spec::VERSION
+  spec.name          = "pod-srpec"
+  spec.version       = Pod::RSpec::VERSION
   spec.authors       = ["Pegerto Fernandez"]
   spec.email         = ["pegerto@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Test required pods by using kubelet-api}
+  spec.description   = %q{Testing an existing running pod by curl and parsing the kube api}
+  spec.homepage      = "https://github.com/pegerto/pod-rspec"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

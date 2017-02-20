@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "pod/spec"
+require "pod/rspec"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,11 +1,8 @@
 require "spec_helper"
 
-RSpec.describe Pod::Spec do
+RSpec.describe Pod::RSpec do
   it "has a version number" do
-    expect(Pod::Spec::VERSION).not_to be nil
+    expect(Pod::RSpec::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
 end
