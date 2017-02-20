@@ -1,11 +1,29 @@
-require "bundler/setup"
-require "pod/rspec"
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
-  config.example_status_persistence_file_path = ".rspec_status"
+require 'specinfra'
+require 'rspec/mocks/standalone'
+require 'rspec/its'
+require 'specinfra/helper/set'
+include Specinfra::Helper::Set
 
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
+set :backend, :exec
+
+set :os, :family => 'linux'
+
+module Specinfra
+  module Backend
+    class Ssh
+      def run_command(cmd, opts={})
+        CommandResult.new :stdout => nil, :exit_status => 0
+      end
+    end
   end
 end
+
+module GetCommand
+  def get_command(method, *args)
+    Specinfra.command.get(method, *args)
+  end
+end
+
+include GetCommand
